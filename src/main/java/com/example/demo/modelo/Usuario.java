@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="USUARIO")
+@Table(name="usuarios")
 
 public class Usuario {
 
@@ -24,11 +24,11 @@ public class Usuario {
 	@Column(name = "cedula", length = 100, nullable = false, unique = true)
 	private Integer cedula;
 	
-	@Column(name = "telefono", length = 100, nullable = false, unique = true)
+	@Column(name = "telefono", length = 100, nullable = false)
 	private String telefono;
 	
-	@Column(name = "FechaNacimiento", length = 100, nullable = false, unique = true)
-	private String FechaNacimiento;
+	@Column(name = "fechaNacimiento", length = 100, nullable = false)
+	private String fechaNacimiento;
 
 	public Usuario() {
 		super();
@@ -42,7 +42,7 @@ public class Usuario {
 		this.apellidos = apellidos;
 		this.cedula = cedula;
 		this.telefono = telefono;
-		FechaNacimiento = fechaNacimiento;
+		this.fechaNacimiento = fechaNacimiento;
 	}
 
 	public Long getId() {
@@ -86,12 +86,11 @@ public class Usuario {
 	}
 
 	public String getFechaNacimiento() {
-		return FechaNacimiento;
+		return fechaNacimiento;
 	}
 
 	public void setFechaNacimiento(String fechaNacimiento) {
-		FechaNacimiento = fechaNacimiento;
+		this.fechaNacimiento = fechaNacimiento;
 	}
-	
-	
+
 }

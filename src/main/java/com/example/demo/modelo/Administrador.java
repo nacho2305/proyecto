@@ -44,4 +44,4 @@ public class Administrador {
 		Contraseña = contraseña;
 	}
 
-}	
+}

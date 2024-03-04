@@ -10,9 +10,4 @@ import com.example.demo.modelo.Usuario;
 @Repository
 public interface RepositorioUsuario extends JpaRepository<Usuario, Long>{
 
-/*    public Empleado findByEmail(String email);
-    public List<Empleado> findByNombre(String nombre);
-    public List<Empleado> findByApellido(String apellido);
-
-*/
 }
